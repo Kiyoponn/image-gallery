@@ -6,7 +6,6 @@ import { Moon, Sun } from './Icons'
 
 export default function ThemeToggler() {
   const { theme, setTheme } = useTheme()
-  const whichTheme = window.localStorage.getItem('theme') || theme
 
   return (
     <div
@@ -20,30 +19,44 @@ export default function ThemeToggler() {
         onClick={() => setTheme('light')}
         className={clsx(
           'group rounded-full p-2',
-          whichTheme === 'light' && 'bg-neutral-one shadow-md'
+          theme === 'light' && 'bg-neutral-one shadow-md'
         )}
       >
-        <Sun
-          className={clsx(
-            'dark:stroke-neutral-four',
-            'dark:group-hover:stroke-neutral-one'
-          )}
-        />
+        <Sun className='dark:stroke-neutral-four dark:group-hover:stroke-neutral-one' />
       </button>
       <button
         onClick={() => setTheme('dark')}
         className={clsx(
           'group rounded-full p-2',
-          whichTheme === 'dark' && 'bg-neutral-eight'
+          theme === 'dark' && 'bg-neutral-eight'
         )}
       >
         <Moon
           className={clsx(
-            'stroke-neutral-seven dark:stroke-neutral-one',
-            'dark:group-hover:stroke-neutral-one group-hover:stroke-neutral-ten'
+            'stroke-neutral-seven group-hover:stroke-neutral-ten',
+            'dark:stroke-neutral-one dark:group-hover:stroke-neutral-one'
           )}
         />
       </button>
+    </div>
+  )
+}
+
+export function ThemeTogglerLoading() {
+  return (
+    <div
+      className={clsx(
+        'border h-min w-min p-1 rounded-full flex justify-center items-center gap-1',
+        'bg-neutral-two border-neutral-three',
+        'dark:bg-neutral-nine dark:border-neutral-eight'
+      )}
+    >
+      <div className='rounded-full p-2'>
+        <Sun className='stroke-neutral-seven dark:stroke-neutral-four' />
+      </div>
+      <div className='rounded-full p-2'>
+        <Moon className='stroke-neutral-seven dark:stroke-neutral-four' />
+      </div>
     </div>
   )
 }

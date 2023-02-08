@@ -3,6 +3,7 @@ lockfileVersion: 5.4
 specifiers:
   '@next/font': 13.1.6
   '@types/node': 18.11.19
+  '@types/prop-types': ^15.7.5
   '@types/react': 18.0.27
   '@types/react-dom': 18.0.10
   autoprefixer: ^10.4.13
@@ -12,6 +13,7 @@ specifiers:
   next: 13.1.6
   next-themes: npm:@wits/next-themes@^0.2.16
   postcss: ^8.4.21
+  prop-types: ^15.8.1
   react: 18.2.0
   react-dom: 18.2.0
   tailwindcss: ^3.2.4
@@ -27,11 +29,13 @@ dependencies:
   eslint-config-next: 13.1.6_4vsywjlpuriuw3tl5oq6zy5a64
   next: 13.1.6_biqbaboplfbrettd7655fr4n2y
   next-themes: /@wits/next-themes/0.2.16_3vryta7zmbcsw4rrqf4axjqggm
+  prop-types: 15.8.1
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
   typescript: 4.9.5
 
 devDependencies:
+  '@types/prop-types': 15.7.5
   autoprefixer: 10.4.13_postcss@8.4.21
   postcss: 8.4.21
   tailwindcss: 3.2.4_postcss@8.4.21
@@ -263,7 +267,6 @@ packages:
 
   /@types/prop-types/15.7.5:
     resolution: {integrity: sha512-JCB8C6SnDoQf0cNycqd/35A7MjcnK+ZTqE7judS6o7utxUCg6imJg3QK2qzHKszlTjcj2cn+NwMB2i96ubpj7w==}
-    dev: false
 
   /@types/react-dom/18.0.10:
     resolution: {integrity: sha512-E42GW/JA4Qv15wQdqJq8DL4JhNpB3prJgjgapN3qJT9K2zO5IIAQh4VXvCEDupoqAwnz0cY4RlXeC/ajX5SFHg==}
