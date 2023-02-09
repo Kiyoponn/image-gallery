@@ -28,7 +28,7 @@ export default function NavLinks() {
               query === index + 1 && 'text-rose-seven dark:text-rose-five'
             )}
           >
-            <Link href={`/?category=${index + 1}`}>{name}</Link>
+            <Link href={`?category=${index + 1}`}>{name}</Link>
           </li>
         ))}
       </ul>
