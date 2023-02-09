@@ -80,15 +80,9 @@ const data = [
 ]
 
 const categories = [
-  {
-    name: 'Architecture',
-  },
-  {
-    name: 'Neon',
-  },
-  {
-    name: 'Landscape',
-  },
+  { name: 'Architecture' },
+  { name: 'Neon' },
+  { name: 'Landscape' },
 ]
 
 export { data, categories }

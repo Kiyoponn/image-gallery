@@ -2,6 +2,7 @@
 
 import clsx from 'clsx'
 import { useTheme } from 'next-themes'
+
 import { Moon, Sun } from './Icons'
 
 export default function ThemeToggler() {
@@ -16,6 +17,8 @@ export default function ThemeToggler() {
       )}
     >
       <button
+        id='light'
+        aria-label='light mode'
         onClick={() => setTheme('light')}
         className={clsx(
           'group rounded-full p-2',
@@ -25,6 +28,8 @@ export default function ThemeToggler() {
         <Sun className='dark:stroke-neutral-four dark:group-hover:stroke-neutral-one' />
       </button>
       <button
+        id='dark'
+        aria-label='dark mode'
         onClick={() => setTheme('dark')}
         className={clsx(
           'group rounded-full p-2',

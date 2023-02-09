@@ -7,7 +7,12 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      aspectRatio: {
+        landscape: '3 / 2',
+        portrait: '2 / 3',
+      }
+    },
     fontSize: {
       '4xl': ['3.75rem', '3.75rem'],
       '3xl': ['3rem', '3rem'],
