@@ -1,4 +1,5 @@
 import { deskTool } from 'sanity/desk'
+import { vercelDeployTool } from 'sanity-plugin-vercel-deploy'
 
 import { schemaTypes } from './schemas/index'
 
@@ -7,7 +8,7 @@ export const config = {
   dataset: 'production',
   title: 'Image Gallery',
   basePath: '/admin',
-  plugins: [deskTool()],
+  plugins: [deskTool(), vercelDeployTool()],
   schema: {
     types: schemaTypes,
   },
