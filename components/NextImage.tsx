@@ -1,15 +1,15 @@
 'use client'
 import clsx from 'clsx'
-import Image, { StaticImageData } from 'next/image'
+import Image from 'next/image'
 import { useState } from 'react'
 
 type Image = {
-  imageSrc: StaticImageData
-  altText: string
-  aspectRatio: string
+  image: string
+  alt: string
+  ar: string
 }
 
-export default function NextImage({ imageSrc, altText, aspectRatio }: Image) {
+export default function NextImage({ image, alt, ar }: Image) {
   const [isLoading, setIsLoading] = useState(true)
 
   return (
@@ -18,9 +18,9 @@ export default function NextImage({ imageSrc, altText, aspectRatio }: Image) {
         'mb-4 relative group rounded dark:bg-neutral-nine bg-neutral-two overflow-hidden',
         'md:mb-4',
         'lg:mb-8',
-        aspectRatio === 'square'
+        ar === 'square'
           ? 'aspect-square'
-          : aspectRatio === 'landscape'
+          : ar === 'landscape'
           ? 'aspect-landscape'
           : 'aspect-portrait'
       )}
@@ -29,9 +29,8 @@ export default function NextImage({ imageSrc, altText, aspectRatio }: Image) {
         fill={true}
         loading='lazy'
         sizes='(min-width: 66em) 33vw, (min-width: 44em) 50vw, 100vw'
-        placeholder='blur'
-        alt={altText}
-        src={imageSrc}
+        alt={alt}
+        src={image}
         className={clsx(
           'duration-700 object-cover ease-in-out group-hover:opacity-90 group-hover:cursor-pointer',
           isLoading

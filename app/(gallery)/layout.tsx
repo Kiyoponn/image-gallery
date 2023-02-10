@@ -1,10 +1,10 @@
-import clsx from 'clsx'
 import { Roboto } from '@next/font/google'
+import clsx from 'clsx'
 import { ServerThemeProvider } from 'next-themes'
 
+import '@/app/globals.css'
 import Header from '@/components/Header'
 import Providers from '@/utils/ThemeProvider'
-import './globals.css'
 
 const roboto = Roboto({
   weight: '400',
