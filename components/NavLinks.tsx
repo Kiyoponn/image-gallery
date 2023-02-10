@@ -36,7 +36,7 @@ export default function NavLinks() {
                 key={_id}
                 className={clsx(
                   'dark:hover:text-rose-five hover:text-rose-seven',
-                  query === category + 1 &&
+                  query === category &&
                     'text-rose-seven dark:text-rose-five'
                 )}
               >

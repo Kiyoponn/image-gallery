@@ -1,15 +1,19 @@
 import { deskTool } from 'sanity/desk'
-import { vercelDeployTool } from 'sanity-plugin-vercel-deploy'
+import { defineConfig } from 'sanity'
 
 import { schemaTypes } from './schemas/index'
+import { dataset, projectId } from './lib/sanity.api'
 
-export const config = {
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
-  dataset: 'production',
+export default defineConfig({
+  name: 'default',
   title: 'Image Gallery',
-  basePath: '/admin',
-  plugins: [deskTool(), vercelDeployTool()],
+
+  projectId,
+  dataset,
+
   schema: {
     types: schemaTypes,
   },
-}
+
+  plugins: [deskTool()],
+})
