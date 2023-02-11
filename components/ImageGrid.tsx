@@ -1,17 +1,14 @@
 'use client'
 
-import clsx from 'clsx'
-import { useSearchParams } from 'next/navigation'
-import useSWR from 'swr'
-
-import NextImage from '@/components/NextImage'
 import { ImageDataType } from '@/utils/Types'
+import clsx from 'clsx'
+import useSWR from 'swr'
+import NextImage from './NextImage'
 
-export default function ImageGrid() {
-  const query = useSearchParams().get('category')
+const fetcher = (url: string) => fetch(url).then((res) => res.json())
 
-  const fetcher = (url: string) => fetch(url).then((res) => res.json())
-  const { data } = useSWR<ImageDataType[]>('/api/images', fetcher)
+export default function ImageGrid({ slug }: { slug?: string }) {
+  const { data } = useSWR<Array<ImageDataType>>('/api/images', fetcher)
 
   return (
     <main
@@ -23,9 +20,11 @@ export default function ImageGrid() {
     >
       {data &&
         data
-          .filter(({ category }: { category: string }) => {
-            if (!query) return true
-            return category === query
+          .filter(({ category }) => {
+            if (slug) {
+              return category === slug
+            }
+            return true
           })
           .map(({ _id, imageUrl, alt, ratio }) => (
             <NextImage key={_id} image={imageUrl} alt={alt} ar={ratio} />

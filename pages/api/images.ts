@@ -1,5 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import client from '@/utils/SanityClient'
+import client from '@/lib/sanity.client'
 import { ImageDataType } from '@/utils/Types'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { groq } from 'next-sanity'
@@ -17,7 +17,7 @@ function getImagesQuery() {
   `)
 }
 
-export default async function handler(_: NextApiRequest, res: NextApiResponse) {
+export default async function GET(_: NextApiRequest, res: NextApiResponse) {
   const images: Array<ImageDataType> = await getImagesQuery()
   res.status(200).json(images)
 }

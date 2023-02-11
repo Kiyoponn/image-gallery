@@ -2,9 +2,8 @@ import { Roboto } from '@next/font/google'
 import clsx from 'clsx'
 import { ServerThemeProvider } from 'next-themes'
 
-import '@/app/globals.css'
 import Header from '@/components/Header'
-import Providers from '@/utils/ThemeProvider'
+import Providers from '@/lib/ThemeProvider'
 
 const roboto = Roboto({
   weight: '400',
@@ -13,14 +12,14 @@ const roboto = Roboto({
   preload: true,
 })
 
-export default function RootLayout({
+export default function GalleryLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
     <ServerThemeProvider attribute='class' defaultTheme='dark'>
-      <html lang='en' className={clsx('scroll-smooth', roboto.className)}>
+      <html lang='en' className={roboto.className}>
         <head />
         <body className='dark:bg-neutral-ten dark:text-neutral-one bg-neutral-one text-neutral-ten'>
           <Providers>

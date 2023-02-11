@@ -1,5 +1,5 @@
 import ImageGrid from '@/components/ImageGrid'
 
-export default async function Page() {
+export default function GalleryPage() {
   return <ImageGrid />
 }

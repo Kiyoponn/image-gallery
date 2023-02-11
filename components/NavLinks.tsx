@@ -2,16 +2,16 @@
 
 import clsx from 'clsx'
 import Link from 'next/link'
-import { useSearchParams } from 'next/navigation'
-import useSWR from 'swr'
+import { usePathname } from 'next/navigation'
 
-import { ImageDataType } from '@/utils/Types'
+const categories = [
+  { _id: 1, category: 'architecture' },
+  { _id: 2, category: 'landscape' },
+  { _id: 3, category: 'neon' },
+]
 
 export default function NavLinks() {
-  const query = useSearchParams().get('category')
-
-  const fetcher = (url: string) => fetch(url).then((res) => res.json())
-  const { data } = useSWR<ImageDataType[]>('/api/images', fetcher)
+  const pathname = usePathname()
 
   return (
     <nav className='mt-6 md:mt-8 text-sm'>
@@ -19,32 +19,25 @@ export default function NavLinks() {
         <li
           className={clsx(
             'dark:hover:text-rose-five hover:text-rose-seven',
-            query === null && 'text-rose-seven dark:text-rose-five'
+            pathname === '/' && 'text-rose-seven dark:text-rose-five'
           )}
         >
           <Link href='/'>All</Link>
         </li>
-        {data &&
-          data
-            .filter((d) => {
-              const category = d.category
-              const index = data.findIndex((d) => d.category === category)
-              return index === data.indexOf(d)
-            })
-            .map(({ _id, category }) => (
-              <li
-                key={_id}
-                className={clsx(
-                  'dark:hover:text-rose-five hover:text-rose-seven',
-                  query === category &&
-                    'text-rose-seven dark:text-rose-five'
-                )}
-              >
-                <Link className='capitalize' href={`?category=${category}`}>
-                  {category}
-                </Link>
-              </li>
-            ))}
+        {categories.map(({ _id, category }) => (
+          <li
+            key={_id}
+            className={clsx(
+              'dark:hover:text-rose-five hover:text-rose-seven',
+              pathname === `/${category}` &&
+                'text-rose-seven dark:text-rose-five'
+            )}
+          >
+            <Link className='capitalize' href={`/${category}`}>
+              {category}
+            </Link>
+          </li>
+        ))}
       </ul>
     </nav>
   )

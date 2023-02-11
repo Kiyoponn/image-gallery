@@ -1,5 +1,4 @@
-import clsx from 'clsx'
-import '@/app/globals.css'
+import './globals.css'
 
 export default function RootLayout({
   children,
@@ -7,7 +6,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang='en' className={clsx('scroll-smooth')}>
+    <html lang='en' className='scroll-smooth'>
       <head />
       <body>{children}</body>
     </html>

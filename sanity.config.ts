@@ -1,11 +1,15 @@
-import { deskTool } from 'sanity/desk'
 import { defineConfig } from 'sanity'
+import { deskTool } from 'sanity/desk'
+import { visionTool } from '@sanity/vision'
 
-import { schemaTypes } from './schemas/index'
-import { dataset, projectId } from './lib/sanity.api'
+import { dataset, projectId } from '@/lib/sanity.api'
+import { schemaTypes } from '@/schemas/index'
+import { galleryTheme } from '@/lib/sanity.theme'
 
 export default defineConfig({
-  name: 'default',
+  basePath: '/admin',
+
+  name: 'image-gallery',
   title: 'Image Gallery',
 
   projectId,
@@ -15,5 +19,7 @@ export default defineConfig({
     types: schemaTypes,
   },
 
-  plugins: [deskTool()],
+  theme: galleryTheme,
+
+  plugins: [deskTool(), visionTool()],
 })
