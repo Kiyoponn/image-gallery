@@ -11,7 +11,10 @@ module.exports = {
       aspectRatio: {
         landscape: '3 / 2',
         portrait: '2 / 3',
-      }
+      },
+      animation: {
+        'spin-fast': 'spin 0.5s linear infinite', 
+      },
     },
     fontSize: {
       '4xl': ['3.75rem', '3.75rem'],

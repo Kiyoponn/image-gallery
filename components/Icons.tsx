@@ -1,3 +1,5 @@
+import clsx from 'clsx'
+
 export const Sun = (props: React.SVGAttributes<SVGSVGElement>) => {
   return (
     <svg
@@ -10,7 +12,6 @@ export const Sun = (props: React.SVGAttributes<SVGSVGElement>) => {
       strokeWidth='2'
       strokeLinecap='round'
       strokeLinejoin='round'
-      className='feather feather-sun'
       {...props}
     >
       <circle cx='12' cy='12' r='5'></circle>
@@ -38,10 +39,26 @@ export const Moon = (props: React.SVGAttributes<SVGSVGElement>) => {
       strokeWidth='2'
       strokeLinecap='round'
       strokeLinejoin='round'
-      className='feather feather-moon'
       {...props}
     >
       <path d='M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z'></path>
+    </svg>
+  )
+}
+
+export const Spinner = (props: React.SVGAttributes<SVGSVGElement>) => {
+  return (
+    <svg
+      xmlns='http://www.w3.org/2000/svg'
+      width='24'
+      height='24'
+      viewBox='0 0 24 24'
+      fill='none'
+      stroke='currentColor'
+      strokeWidth='1.5'
+      {...props}
+    >
+      <path d='M4.5 12.5C4.5 16.9183 8.08172 20.5 12.5 20.5C16.9183 20.5 20.5 16.9183 20.5 12.5C20.5 8.08172 16.9183 4.5 12.5 4.5'></path>
     </svg>
   )
 }

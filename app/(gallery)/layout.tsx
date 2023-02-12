@@ -3,7 +3,9 @@ import clsx from 'clsx'
 import { ServerThemeProvider } from 'next-themes'
 
 import Header from '@/components/Header'
-import Providers from '@/lib/ThemeProvider'
+import Providers from '@/components/ThemeProvider'
+
+import '@/app/globals.css'
 
 const roboto = Roboto({
   weight: '400',

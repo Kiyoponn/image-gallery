@@ -2,7 +2,7 @@ import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
 import { visionTool } from '@sanity/vision'
 
-import { dataset, projectId } from '@/lib/sanity.api'
+import { apiVersion, dataset, projectId } from '@/lib/sanity.api'
 import { schemaTypes } from '@/schemas/index'
 import { galleryTheme } from '@/lib/sanity.theme'
 

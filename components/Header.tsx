@@ -1,6 +1,6 @@
+import { Roboto_Slab } from '@next/font/google'
 import clsx from 'clsx'
 import dynamic from 'next/dynamic'
-import { Roboto_Slab } from '@next/font/google'
 
 import NavLinks from './NavLinks'
 import { ThemeTogglerLoading } from './ThemeToggler'
