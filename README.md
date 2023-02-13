@@ -3,9 +3,13 @@
 A fully responsive Image Gallery with dark & light-mode, made using:
 
 - [nextjs](https://nextjs.org/)
-  - The react framework for the web
+  - The react framework for the web.
 - [tailwindcss](https://tailwindcss.com/)
   - A utility-first CSS framework packed with classes.
+- [sanity](https://www.sanity.io/)
+  - The Composable Content Cloud.
+- [next-theme](https://github.com/pacocoursey/next-themes)
+  - Perfect next.js dark mode in 2 lines of code.
 
 ## 🎨 Design
 
