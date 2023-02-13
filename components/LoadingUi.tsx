@@ -7,7 +7,7 @@ export default function LoadingUI() {
         Loading...
       </p>
       <span className='sr-only'>Loading</span>
-      <Spinner className='animate-spin-fast stroke-neutral-seven dark:stroke-neutral-four' />
+      <Spinner className='animate-spin-fast stroke-[1.5] stroke-neutral-seven dark:stroke-neutral-four' />
     </div>
   )
 }
