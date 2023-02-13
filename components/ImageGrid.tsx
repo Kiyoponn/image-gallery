@@ -4,12 +4,12 @@ import clsx from 'clsx'
 
 import { ImageDataType } from '@/utils/Types'
 import { Suspense } from 'react'
-import LoadingUI from './LoadingUI'
 import NextImage from './NextImage'
+import Loading from '@/app/(gallery)/loading'
 
 export default function ImageGrid({ data }: { data: Array<ImageDataType> }) {
   return (
-    <Suspense fallback={<LoadingUI />}>
+    <Suspense fallback={<Loading />}>
       <main
         className={clsx(
           'mt-4 columns-1 gap-x-4 gap-y-4',
