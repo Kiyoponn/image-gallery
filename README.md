@@ -13,7 +13,7 @@ A fully responsive Image Gallery with dark & light-mode, made using:
 
 ## 🎨 Design
 
-Desing is taken from skillthrive's [masonry image gallery](https://www.skillthrive.com/challenges/masonry-image-gallery)
+Desing source skillthrive's [masonry image gallery](https://www.skillthrive.com/challenges/masonry-image-gallery)
 
 ## ✅ Run Locally
 
