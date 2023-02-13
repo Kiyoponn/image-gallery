@@ -4,16 +4,17 @@ import { buildLegacyTheme } from 'sanity'
 const roboto = Roboto({
   weight: '400',
   subsets: ['latin'],
-  display: 'optional',
+  display: 'swap',
   preload: true,
 })
 
 const brand = {
-  '--brand': '#D8CCF1',
+  '--brand': '#5A8CFF',
 
-  '--success': '#3291FF',
-  '--error': '#F33',
-  '--warning': '#F7B9FF',
+  '--info': '#F81CE5',
+  '--success': '#0070F3',
+  '--error': '#FF0000',
+  '--warning': '#F5A623',
 
   '--neutral-one': '#F8FAFC',
   '--neutral-five': '#94A3B8',
@@ -42,7 +43,7 @@ export const galleryTheme = buildLegacyTheme({
   '--default-button-danger-color': brand['--error'],
 
   // state colors
-  '--state-info-color': brand['--brand'],
+  '--state-info-color': brand['--info'],
   '--state-success-color': brand['--success'],
   '--state-warning-color': brand['--warning'],
   '--state-danger-color': brand['--error'],

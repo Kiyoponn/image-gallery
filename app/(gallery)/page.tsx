@@ -1,6 +1,5 @@
 import { previewData } from 'next/headers'
 
-import { Spinner } from '@/components/Icons'
 import ImageGrid from '@/components/ImageGrid'
 import PreviewGallery from '@/components/sanity/PreviewGallery'
 import PreviewSuspense from '@/components/sanity/PreviewSuspense'

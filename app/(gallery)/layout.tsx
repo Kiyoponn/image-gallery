@@ -10,7 +10,7 @@ import '@/app/globals.css'
 const roboto = Roboto({
   weight: '400',
   subsets: ['latin'],
-  display: 'optional',
+  display: 'swap',
   preload: true,
 })
 
@@ -20,16 +20,16 @@ export default function GalleryLayout({
   children: React.ReactNode
 }) {
   return (
-    <ServerThemeProvider attribute='class' defaultTheme='dark'>
+    <ServerThemeProvider defaultTheme='dark' attribute='class'>
       <html lang='en' className={roboto.className}>
         <head />
-        <body className='dark:bg-neutral-ten dark:text-neutral-one bg-neutral-one text-neutral-ten'>
+        <body className='bg-neutral-one text-neutral-ten dark:bg-neutral-ten dark:text-neutral-one'>
           <Providers>
             <section
               className={clsx(
-                'mx-auto py-12 px-4',
+                'mx-auto px-4 py-12 ',
                 'md:py-16 md:px-8',
-                'lg:py-24 lg:px-8 lg:max-w-5xl'
+                'lg:max-w-5xl lg:py-24 lg:px-8'
               )}
             >
               <Header />

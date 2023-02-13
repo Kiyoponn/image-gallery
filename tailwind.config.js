@@ -13,7 +13,7 @@ module.exports = {
         portrait: '2 / 3',
       },
       animation: {
-        'spin-fast': 'spin 0.5s linear infinite', 
+        'spin-fast': 'spin 0.5s linear infinite',
       },
     },
     fontSize: {

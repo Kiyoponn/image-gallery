@@ -16,7 +16,7 @@ export default function NextImage({ image, alt, ar }: Image) {
   return (
     <figure
       className={clsx(
-        'mb-4 relative group rounded dark:bg-neutral-nine bg-neutral-two overflow-hidden',
+        'group relative mb-4 overflow-hidden rounded bg-neutral-two dark:bg-neutral-nine',
         'md:mb-4',
         'lg:mb-8',
         ar === 'square'
@@ -33,7 +33,7 @@ export default function NextImage({ image, alt, ar }: Image) {
         alt={alt}
         src={image}
         className={clsx(
-          'duration-700 object-cover ease-in-out group-hover:opacity-90 group-hover:cursor-pointer',
+          'object-cover duration-700 ease-in-out group-hover:cursor-pointer group-hover:opacity-90',
           isLoading
             ? 'scale-120 blur-3xl grayscale'
             : 'scale-100 blur-0 grayscale-0'

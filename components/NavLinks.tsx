@@ -14,11 +14,11 @@ export default function NavLinks() {
   const pathname = usePathname()
 
   return (
-    <nav className='mt-6 md:mt-8 text-sm'>
+    <nav className='mt-6 text-sm md:mt-8'>
       <ul className='flex gap-5'>
         <li
           className={clsx(
-            'dark:hover:text-rose-five hover:text-rose-seven',
+            'hover:text-rose-seven dark:hover:text-rose-five',
             pathname === '/' && 'text-rose-seven dark:text-rose-five'
           )}
         >
@@ -28,7 +28,7 @@ export default function NavLinks() {
           <li
             key={_id}
             className={clsx(
-              'dark:hover:text-rose-five hover:text-rose-seven',
+              'hover:text-rose-seven dark:hover:text-rose-five',
               pathname === `/${category}` &&
                 'text-rose-seven dark:text-rose-five'
             )}

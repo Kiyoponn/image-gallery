@@ -8,12 +8,15 @@ import { Moon, Sun } from './Icons'
 export default function ThemeToggler() {
   const { theme, setTheme } = useTheme()
 
+  const defaultTheme = document.documentElement.getAttribute('data-theme')
+  console.log('defaultTheme', defaultTheme)
+
   return (
     <div
       className={clsx(
-        'border h-min w-min p-1 rounded-full flex justify-center items-center gap-1',
-        'bg-neutral-two border-neutral-three',
-        'dark:bg-neutral-nine dark:border-neutral-eight'
+        'flex h-min w-min items-center justify-center gap-1 rounded-full border p-1',
+        'border-neutral-three bg-neutral-two',
+        'dark:border-neutral-eight dark:bg-neutral-nine'
       )}
     >
       <button
@@ -51,9 +54,9 @@ export function ThemeTogglerLoading() {
   return (
     <div
       className={clsx(
-        'border h-min w-min p-1 rounded-full flex justify-center items-center gap-1',
-        'bg-neutral-two border-neutral-three',
-        'dark:bg-neutral-nine dark:border-neutral-eight'
+        'flex h-min w-min items-center justify-center gap-1 rounded-full border p-1',
+        'border-neutral-three bg-neutral-two',
+        'dark:border-neutral-eight dark:bg-neutral-nine'
       )}
     >
       <div className='rounded-full p-2'>

@@ -21,11 +21,11 @@ const ThemeToggler = dynamic(() => import('./ThemeToggler'), {
 
 export default function Header() {
   return (
-    <header className='flex flex-col lg:flex-row lg:items-end justify-between'>
+    <header className='flex flex-col justify-between lg:flex-row lg:items-end'>
       <div>
         <ThemeToggler />
-        <h1 className={clsx('text-2xl mt-4', roboto_slab.className)}>Works</h1>
-        <p className='text-sm mt-3 md:mt-4 max-w-md'>
+        <h1 className={clsx('mt-4 text-2xl', roboto_slab.className)}>Works</h1>
+        <p className='mt-3 max-w-md text-sm md:mt-4'>
           Sed nec sit malesuada cursus dolor accumsan massa semper enim. Egestas
           vel ac consectetur enim.
         </p>

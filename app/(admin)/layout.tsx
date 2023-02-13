@@ -6,11 +6,11 @@ import '@/app/globals.css'
 const roboto = Roboto({
   weight: '400',
   subsets: ['latin'],
-  display: 'optional',
+  display: 'swap',
   preload: true,
 })
 
-export default function RootLayout({
+export default function AdminLayout({
   children,
 }: {
   children: React.ReactNode

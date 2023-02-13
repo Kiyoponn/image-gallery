@@ -21,7 +21,7 @@ export default function PreviewCategory({ category }: { category: string }) {
   return (
     <>
       <ImageGrid data={data} />
-      <ExitPreviewButton/>
+      <ExitPreviewButton />
     </>
   )
 }
