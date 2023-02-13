@@ -53,7 +53,7 @@ export const Spinner = (props: React.SVGAttributes<SVGSVGElement>) => {
       viewBox='0 0 24 24'
       fill='none'
       stroke='currentColor'
-      strokeWidth='1.5'
+      strokeWidth='2'
       {...props}
     >
       <path d='M4.5 12.5C4.5 16.9183 8.08172 20.5 12.5 20.5C16.9183 20.5 20.5 16.9183 20.5 12.5C20.5 8.08172 16.9183 4.5 12.5 4.5'></path>
