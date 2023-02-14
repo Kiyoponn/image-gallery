@@ -13,7 +13,7 @@ A fully responsive Image Gallery with dark & light-mode, made using:
 
 ## 🎨 Design
 
-Desing source skillthrive's [masonry image gallery](https://www.skillthrive.com/challenges/masonry-image-gallery)
+Source: skillthrive's [masonry image gallery](https://www.skillthrive.com/challenges/masonry-image-gallery)
 
 ## ✅ Run Locally
 
@@ -35,7 +35,7 @@ Install dependencies
   pnpm install
 ```
 
-Start
+Start dev server
 
 ```bash
   pnpm dev
