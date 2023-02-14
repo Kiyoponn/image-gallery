@@ -29,6 +29,7 @@ export default function ThemeToggler() {
           name='theme'
           onChange={() => setTheme('light')}
           className='absolute appearance-none'
+          {...{ checked: theme === 'light' }}
         />
         <label
           htmlFor='theme-light'
@@ -52,6 +53,7 @@ export default function ThemeToggler() {
           name='theme'
           onChange={() => setTheme('dark')}
           className='absolute appearance-none'
+          {...{ checked: theme === 'dark' }}
         />
         <label
           htmlFor='theme-dark'
