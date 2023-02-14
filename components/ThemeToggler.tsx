@@ -2,21 +2,11 @@
 
 import clsx from 'clsx'
 import { useTheme } from 'next-themes'
-import { useEffect, useState } from 'react'
 
 import { Moon, Sun } from './Icons'
 
 export default function ThemeToggler() {
-  const [mounted, setMounted] = useState(false)
   const { theme, setTheme } = useTheme()
-
-  useEffect(() => {
-    setMounted(true)
-  }, [])
-
-  if (!mounted) {
-    return null
-  }
 
   return (
     <div
@@ -26,33 +16,57 @@ export default function ThemeToggler() {
         'dark:border-neutral-eight dark:bg-neutral-nine'
       )}
     >
-      <button
-        id='light'
-        aria-label='light mode'
-        onClick={() => setTheme('light')}
+      <span
         className={clsx(
-          'group rounded-full p-2',
+          'group relative rounded-full',
           theme === 'light' && 'bg-neutral-one shadow-md'
         )}
       >
-        <Sun className='dark:stroke-neutral-four dark:group-hover:stroke-neutral-one' />
-      </button>
-      <button
-        id='dark'
-        aria-label='dark mode'
-        onClick={() => setTheme('dark')}
+        <input
+          type='radio'
+          id='theme-light'
+          value='light'
+          name='theme'
+          onChange={() => setTheme('light')}
+          className='absolute appearance-none'
+        />
+        <label
+          htmlFor='theme-light'
+          aria-label='Switch to light mode'
+          title='Switch to light mode'
+          className='flex cursor-pointer items-center justify-center p-2'
+        >
+          <Sun className='dark:stroke-neutral-four dark:group-hover:stroke-neutral-one' />
+        </label>
+      </span>
+      <span
         className={clsx(
-          'group rounded-full p-2',
+          'group relative rounded-full',
           theme === 'dark' && 'bg-neutral-eight'
         )}
       >
-        <Moon
-          className={clsx(
-            'stroke-neutral-seven group-hover:stroke-neutral-ten',
-            'dark:stroke-neutral-one dark:group-hover:stroke-neutral-one'
-          )}
+        <input
+          type='radio'
+          id='theme-dark'
+          value='dark'
+          name='theme'
+          onChange={() => setTheme('dark')}
+          className='absolute appearance-none'
         />
-      </button>
+        <label
+          htmlFor='theme-dark'
+          aria-label='Switch to dark mode'
+          title='Switch to dark mode'
+          className='flex cursor-pointer items-center justify-center p-2'
+        >
+          <Moon
+            className={clsx(
+              'stroke-neutral-seven group-hover:stroke-neutral-ten',
+              'dark:stroke-neutral-one dark:group-hover:stroke-neutral-one'
+            )}
+          />
+        </label>
+      </span>
     </div>
   )
 }

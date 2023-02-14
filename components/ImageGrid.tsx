@@ -2,10 +2,10 @@
 
 import clsx from 'clsx'
 
+import Loading from '@/app/(gallery)/loading'
 import { ImageDataType } from '@/utils/Types'
 import { Suspense } from 'react'
 import NextImage from './NextImage'
-import Loading from '@/app/(gallery)/loading'
 
 export default function ImageGrid({ data }: { data: Array<ImageDataType> }) {
   return (
