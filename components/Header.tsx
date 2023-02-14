@@ -8,7 +8,7 @@ import { ThemeTogglerLoading } from './ThemeToggler'
 const roboto_slab = Roboto_Slab({
   weight: '500',
   subsets: ['latin'],
-  display: 'optional',
+  display: 'swap',
   preload: true,
 })
 
