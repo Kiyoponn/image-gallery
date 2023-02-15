@@ -15,7 +15,6 @@ export default async function GalleryPage() {
     )
   }
 
-  return null
   const data = await getAll()
   return <ImageGrid data={data} />
 }
