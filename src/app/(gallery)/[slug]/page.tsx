@@ -19,6 +19,7 @@ export default async function CategoryPage({
     )
   }
 
+  return null
   const data = await getByCategory(slug)
   return <ImageGrid data={data} />
 }

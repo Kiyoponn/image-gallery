@@ -1,4 +1,4 @@
-import { Spinner } from '@/src/components/Icons'
+import SpinnerIcon from '@/src/icons/Spinner'
 
 export default function Loading() {
   return (
@@ -7,7 +7,7 @@ export default function Loading() {
         Loading...
       </p>
       <span className='sr-only'>Loading</span>
-      <Spinner className='animate-spin-fast stroke-neutral-seven stroke-[1.5] dark:stroke-neutral-four' />
+      <SpinnerIcon className='animate-spin-fast stroke-neutral-seven stroke-[1.5] dark:stroke-neutral-four' />
     </div>
   )
 }
