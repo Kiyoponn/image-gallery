@@ -1,5 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import { client } from '@/lib/sanity.client'
+import { client } from '@/src/lib/sanity.client'
 import type { NextApiRequest, NextApiResponse } from 'next'
 import { groq } from 'next-sanity'
 

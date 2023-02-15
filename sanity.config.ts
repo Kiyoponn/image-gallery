@@ -2,9 +2,9 @@ import { visionTool } from '@sanity/vision'
 import { defineConfig } from 'sanity'
 import { deskTool } from 'sanity/desk'
 
-import { dataset, projectId } from '@/lib/sanity.api'
-import { galleryTheme } from '@/lib/sanity.theme'
 import { schemaTypes } from '@/schemas/index'
+import { dataset, projectId } from '@/src/lib/sanity.api'
+import { galleryTheme } from '@/src/lib/sanity.theme'
 
 export default defineConfig({
   basePath: '/admin',

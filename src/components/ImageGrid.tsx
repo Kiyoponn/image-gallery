@@ -2,8 +2,8 @@
 
 import clsx from 'clsx'
 
-import Loading from '@/app/(gallery)/loading'
-import { ImageDataType } from '@/utils/Types'
+import Loading from '@/src/app/(gallery)/loading'
+import { ImageDataType } from '@/src/utils/Types'
 import { Suspense } from 'react'
 import NextImage from './NextImage'
 

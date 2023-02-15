@@ -1,9 +1,9 @@
 import { previewData } from 'next/headers'
 
-import ImageGrid from '@/components/ImageGrid'
-import PreviewCategory from '@/components/sanity/PreviewCategory'
-import PreviewSuspense from '@/components/sanity/PreviewSuspense'
-import { getByCategory } from '@/utils/Groq'
+import ImageGrid from '@/src/components/ImageGrid'
+import PreviewCategory from '@/src/components/sanity/PreviewCategory'
+import PreviewSuspense from '@/src/components/sanity/PreviewSuspense'
+import { getByCategory } from '@/src/utils/Groq'
 import Loading from '../loading'
 
 export default async function CategoryPage({

@@ -2,12 +2,12 @@
 
 import { groq } from 'next-sanity'
 
-import { usePreview } from '@/lib/sanity.preview'
+import { usePreview } from '@/src/lib/sanity.preview'
 import ImageGrid from '../ImageGrid'
 import ExitPreviewButton from './ExitPreview'
 
-export default function PreviewCategory({ category }: { category: string }) {
-  const query = groq`*[_type == "gallery" && category == "${category}"] {
+export default function PreviewGallery() {
+  const query = groq`*[_type == "gallery"] {
     _id,
       title,
       ratio,
@@ -15,7 +15,6 @@ export default function PreviewCategory({ category }: { category: string }) {
       "imageUrl": image.asset->url,
       "alt": image.alt
   }`
-
   const data = usePreview(null, query)
 
   return (

@@ -1,9 +1,9 @@
 import { previewData } from 'next/headers'
 
-import ImageGrid from '@/components/ImageGrid'
-import PreviewGallery from '@/components/sanity/PreviewGallery'
-import PreviewSuspense from '@/components/sanity/PreviewSuspense'
-import { getAll } from '@/utils/Groq'
+import ImageGrid from '@/src/components/ImageGrid'
+import PreviewGallery from '@/src/components/sanity/PreviewGallery'
+import PreviewSuspense from '@/src/components/sanity/PreviewSuspense'
+import { getAll } from '@/src/utils/Groq'
 import Loading from './loading'
 
 export default async function GalleryPage() {

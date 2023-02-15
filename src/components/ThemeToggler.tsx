@@ -2,11 +2,21 @@
 
 import clsx from 'clsx'
 import { useTheme } from 'next-themes'
+import { useEffect, useState } from 'react'
 
 import { Moon, Sun } from './Icons'
 
 export default function ThemeToggler() {
+  const [mounted, setMounted] = useState(false)
   const { resolvedTheme, setTheme } = useTheme()
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
+  if (!mounted) {
+    return null
+  }
 
   return (
     <div

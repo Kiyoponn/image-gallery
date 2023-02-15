@@ -1,7 +1,7 @@
 import { Roboto } from '@next/font/google'
 import clsx from 'clsx'
 
-import '@/app/globals.css'
+import '@/src/app/globals.css'
 
 const roboto = Roboto({
   weight: '400',
