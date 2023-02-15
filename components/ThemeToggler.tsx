@@ -37,7 +37,12 @@ export default function ThemeToggler() {
           title='Switch to light mode'
           className='flex cursor-pointer items-center justify-center p-2'
         >
-          <Sun className='dark:stroke-neutral-four dark:group-hover:stroke-neutral-one' />
+          <Sun
+            className={clsx(
+              'stroke-neutral-ten group-hover:stroke-neutral-ten',
+              'dark:stroke-neutral-four dark:group-hover:stroke-neutral-one'
+            )}
+          />
         </label>
       </span>
       <span
