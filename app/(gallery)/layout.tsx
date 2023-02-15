@@ -21,8 +21,6 @@ export default function GalleryLayout({
 }) {
   return (
     <ServerThemeProvider
-      enableSystem={false}
-      defaultTheme='dark'
       attribute='class'
     >
       <html lang='en' className={clsx('scroll-smooth', roboto.className)}>

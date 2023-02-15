@@ -28,7 +28,8 @@ export default function NextImage({ image, alt, ar }: Image) {
     >
       <Image
         fill={true}
-        loading='lazy'
+        loading={ar === 'portrait' ? 'eager' : 'lazy'}
+        priority={ar === 'portrait' ? true : false}
         sizes='(min-width: 66em) 33vw, (min-width: 44em) 50vw, 100vw'
         alt={alt}
         src={image}

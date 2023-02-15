@@ -6,7 +6,7 @@ import { useTheme } from 'next-themes'
 import { Moon, Sun } from './Icons'
 
 export default function ThemeToggler() {
-  const { theme, setTheme } = useTheme()
+  const { resolvedTheme, setTheme } = useTheme()
 
   return (
     <div
@@ -19,7 +19,8 @@ export default function ThemeToggler() {
       <span
         className={clsx(
           'group relative rounded-full',
-          theme === 'light' && 'bg-neutral-one shadow-md'
+          resolvedTheme === 'light' &&
+            'bg-neutral-one shadow-md dark:bg-neutral-eight'
         )}
       >
         <input
@@ -27,9 +28,8 @@ export default function ThemeToggler() {
           id='theme-light'
           value='light'
           name='theme'
-          onChange={() => setTheme('light')}
+          onChange={(e) => setTheme(e.target.value)}
           className='absolute appearance-none'
-          {...{ checked: theme === 'light' }}
         />
         <label
           htmlFor='theme-light'
@@ -43,7 +43,8 @@ export default function ThemeToggler() {
       <span
         className={clsx(
           'group relative rounded-full',
-          theme === 'dark' && 'bg-neutral-eight'
+          resolvedTheme === 'dark' &&
+            'bg-neutral-one shadow-md dark:bg-neutral-eight'
         )}
       >
         <input
@@ -51,9 +52,8 @@ export default function ThemeToggler() {
           id='theme-dark'
           value='dark'
           name='theme'
-          onChange={() => setTheme('dark')}
+          onChange={(e) => setTheme(e.target.value)}
           className='absolute appearance-none'
-          {...{ checked: theme === 'dark' }}
         />
         <label
           htmlFor='theme-dark'
