@@ -1,10 +1,10 @@
 import { groq } from 'next-sanity'
 
-import { client } from '@/src/lib/sanity.client'
+import { cachedClient } from '@/src/lib/sanity.client'
 import { ImageDataType } from './Types'
 
 const getAll = async () => {
-  return await client.fetch<Array<ImageDataType>>(groq`
+  return await cachedClient<Array<ImageDataType>>(groq`
   *[_type == "gallery"] {
     _id,
     title,
@@ -17,7 +17,7 @@ const getAll = async () => {
 }
 
 const getByCategory = async (category: string) => {
-  return await client.fetch<Array<ImageDataType>>(groq`
+  return await cachedClient<Array<ImageDataType>>(groq`
   *[_type == "gallery" && category == "${category}"] {
     _id,
     title,
