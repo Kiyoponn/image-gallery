@@ -10,6 +10,8 @@ A fully responsive Image Gallery with dark & light-mode, made using:
   - The Composable Content Cloud.
 - [next-theme](https://github.com/pacocoursey/next-themes)
   - Perfect next.js dark mode in 2 lines of code.
+- [clsx](https://github.com/lukeed/clsx)
+  - A tiny utility for constructing `className` strings conditionally.
 
 ## 🎨 Design
 
