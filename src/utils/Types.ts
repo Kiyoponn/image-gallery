@@ -6,7 +6,3 @@ export type ImageDataType = {
   imageUrl: string
   alt: string
 }
-
-export interface Categories {
-  [key: string]: string
-}

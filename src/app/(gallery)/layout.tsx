@@ -2,7 +2,7 @@ import { Roboto } from '@next/font/google'
 import clsx from 'clsx'
 
 import Header from '@/src/components/Header'
-import Providers from '@/src/components/ThemeProvider'
+import Provider from '@/src/components/ThemeProvider'
 
 import '@/src/app/globals.css'
 
@@ -26,7 +26,7 @@ export default function GalleryLayout({
     >
       <head />
       <body className='bg-neutral-one text-neutral-ten dark:bg-neutral-ten dark:text-neutral-one'>
-        <Providers>
+        <Provider>
           <section
             className={clsx(
               'mx-auto px-4 py-12 ',
@@ -37,7 +37,7 @@ export default function GalleryLayout({
             <Header />
             {children}
           </section>
-        </Providers>
+        </Provider>
       </body>
     </html>
   )
