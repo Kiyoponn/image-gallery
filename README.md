@@ -1,17 +1,15 @@
-# Image Gallery
+# **Image Gallery**
 
-A fully responsive Image Gallery with dark & light-mode, made using:
+A fully responsive Image Gallery with dark & light-mode, using [Nextjs](https://nextjs.org/)
 
-- [nextjs](https://nextjs.org/)
-  - The react framework for the web.
-- [tailwindcss](https://tailwindcss.com/)
-  - A utility-first CSS framework packed with classes.
-- [sanity](https://www.sanity.io/)
-  - The Composable Content Cloud.
-- [next-theme](https://github.com/pacocoursey/next-themes)
-  - Perfect next.js dark mode in 2 lines of code.
-- [clsx](https://github.com/lukeed/clsx)
-  - A tiny utility for constructing `className` strings conditionally.
+## ⚙️ Utilities
+
+- [Sanity](https://www.sanity.io/) for content management.
+- [Tailwindcss](https://tailwindcss.com/) for building UI.
+- [Next Theme](https://github.com/pacocoursey/next-themes) for dark and light mode.
+- [Clsx](https://github.com/lukeed/clsx) for constructing `className` strings conditionally.
+- [Prettier](https://prettier.io) for code formatting.
+- [Vercel](https://vercel.com) for hosting.
 
 ## 🎨 Design
 
