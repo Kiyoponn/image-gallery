@@ -2,12 +2,19 @@
   "name": "st-image-gallery",
   "version": "0.1.0",
   "private": true,
+  "prettier": {
+    "tabWidth": 2,
+    "semi": false,
+    "singleQuote": true,
+    "jsxSingleQuote": true,
+    "trailingComma": "es5"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prettier": "pnpm dlx prettier --write ."
+    "format": "prettier --write --ignore-path .gitignore \"**/*.{js,ts,tsx,md}\""
   },
   "dependencies": {
     "@next/font": "13.1.6",
